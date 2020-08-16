@@ -1,0 +1,40 @@
+.search {
+  height: 40px;
+  padding: 3px;
+  border: 0;
+  border-bottom: 1px solid lightgrey;
+  width: 70%;
+}
+
+.search:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  animation: bluegrow 0.3s ease-in;
+}
+
+@keyframes bluegrow {
+  from {
+    border-bottom: 1px solid lightgrey;
+  }
+  to {
+    border-bottom: 1px solid black;
+  }
+}
+
+.submit {
+  height: 40px;
+  width: 20%;
+  padding: 3px;
+  margin: auto;
+  background: white;
+  border-radius: 50px;
+  border: 1px solid lightgrey;
+}
+
+.search-form {
+  width: 80%;
+  max-width: 560px;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+}

@@ -1,0 +1,182 @@
+.img-display {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  position: relative;
+  transform: translate(-50%);
+  overflow: hidden;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  transition: transform 0.4s ease-in-out;
+}
+
+.main-img {
+  grid-row: span 2 / auto;
+  grid-column: span 2 / auto;
+}
+
+.img {
+  height: 100%;
+}
+.info {
+  margin: 20px;
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.img-div {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.img-nav-wrapper {
+  position: relative;
+}
+
+.next-btn,
+.prev-btn {
+  position: absolute;
+  z-index: 3;
+  background: transparent;
+  color: white;
+  border: 0;
+  height: 100px;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: lightgrey;
+  transition: color 0.3s ease-in-out;
+}
+
+.bulletpoints {
+  width: 40%;
+  max-width: 350px;
+  background: rgb(160, 158, 158);
+  height: fit-content;
+}
+
+.rating i {
+  color: rgb(49, 149, 211);
+}
+
+.descriptions {
+  width: 58%;
+}
+
+.bulletpoints ul {
+  padding: 25px;
+}
+
+strong {
+  font-size: 20px;
+}
+
+.price {
+  float: right;
+}
+
+.bulletpoints h2 {
+  text-align: center;
+}
+
+.info-section {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-now {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  background: rgb(49, 149, 211);
+  font-size: 20px;
+}
+
+@media (max-width: 970px) {
+  .img-display {
+    height: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  .img-display {
+    width: 100%;
+    gap: 0;
+    border-radius: 0;
+    overflow: visible;
+    height: fit-content;
+    display: flex;
+  }
+
+  .next-btn,
+  .prev-btn {
+    display: block;
+  }
+
+  .img {
+    width: 100vw;
+  }
+
+  .img-div {
+    width: fit-content;
+    overflow: visible;
+  }
+
+  .name-rating {
+    width: 90%;
+    margin: auto;
+  }
+
+  .info {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .info-section {
+    width: 90%;
+  }
+}
+
+@media (min-width: 751px) {
+  .img-display {
+    transition: none;
+    transform: translate(0%) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .descriptions {
+    width: 100%;
+  }
+
+  .bulletpoints {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+}
