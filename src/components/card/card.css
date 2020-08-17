@@ -1,12 +1,17 @@
+.cards-container {
+  margin: auto;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(138, 138, 138);
+  box-shadow: 0px 0px 10px #888888;
   border-radius: 15px;
-  margin: 5px auto;
-  flex: 0 1 23%;
-
-  position: relative;
+  margin: 10px;
+  flex: 0 0 23%;
   overflow: hidden;
 }
 
@@ -17,26 +22,30 @@
 
 @media (max-width: 1440px) {
   .card {
-    flex: 0 1 48%;
+    flex: 0 0 47%;
   }
 }
 
 @media (max-width: 800px) {
   .card {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 }
 
 .card-img {
   width: 100%;
-  border-radius: 15px;
 }
 
-.cards-container {
-  margin: auto;
-  display: flex;
-  width: 90%;
-  flex-wrap: wrap;
+.count {
+  position: absolute;
+  color: black;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.39);
+  width: 30px;
+  height: 20px;
+  right: 15px;
+  bottom: 0;
+  text-align: center;
 }
 
 .img-container {

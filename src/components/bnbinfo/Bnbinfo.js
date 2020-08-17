@@ -54,12 +54,19 @@ const Bnbinfo = () => {
       </div>
 
       <div className="img-nav-wrapper">
-        <div className="prev-btn" onClick={previous}>
-          <i className="arrow" class="fas fa-angle-left fa-3x"></i>
-        </div>
-        <div className="next-btn" onClick={next}>
-          <i className="arrow" class="fas fa-angle-right fa-3x"></i>
-        </div>
+        {counter !== 0 && (
+          <div className="prev-btn" onClick={previous}>
+            <i className="arrow" class="fas fa-angle-left fa-3x"></i>
+          </div>
+        )}
+        {counter !== 4 && (
+          <div className="next-btn" onClick={next}>
+            <i className="arrow" class="fas fa-angle-right fa-3x"></i>
+          </div>
+        )}
+
+        <h4 className="count counter">{counter + 1}/5</h4>
+
         <div
           className="img-display"
           style={{

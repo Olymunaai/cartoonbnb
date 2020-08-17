@@ -23,12 +23,17 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="img-nav-wrapper">
-        <div className="prev" onClick={previous}>
-          <i className="arrow" class="fas fa-angle-left fa-3x"></i>
-        </div>
-        <div className="next" onClick={next}>
-          <i className="arrow" class="fas fa-angle-right fa-3x"></i>
-        </div>
+        {counter !== 0 && (
+          <div className="prev" onClick={previous}>
+            <i className="arrow" class="fas fa-angle-left fa-3x"></i>
+          </div>
+        )}
+        {counter !== 4 && (
+          <div className="next" onClick={next}>
+            <i className="arrow" class="fas fa-angle-right fa-3x"></i>
+          </div>
+        )}
+        <h4 className="count">{counter + 1}/5</h4>
         <div
           className="img-container"
           style={{ transform: `translateX(${counter * -100}%)` }}

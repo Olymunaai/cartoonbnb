@@ -49,6 +49,10 @@
   transform: translateY(-50%);
 }
 
+.counter {
+  display: none;
+}
+
 .prev-btn {
   left: 15px;
 }
@@ -131,7 +135,8 @@ strong {
   }
 
   .next-btn,
-  .prev-btn {
+  .prev-btn,
+  .counter {
     display: block;
   }
 
