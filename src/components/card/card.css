@@ -29,6 +29,7 @@
 @media (max-width: 800px) {
   .card {
     flex: 0 0 100%;
+    margin: 10px auto;
   }
 }
 
