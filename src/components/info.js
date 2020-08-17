@@ -192,7 +192,7 @@ const info = [
     rating: "3.8",
     name: "Barbie's Dreamhouse",
     description:
-      "When your host is a professional racecar driver, tv star and a plethora of others, you know you're in good company!",
+      "When your host is a professional racecar driver, tv star, fashion model, doctor and engineer. You know you're in good company!",
     extended: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat, metus nec mattis lacinia, magna massa dignissim augue, sed euismod leo arcu vel nibh. Praesent sit amet fringilla mi, ac luctus neque. Aliquam vel eleifend nisi, vitae euismod ante. Nulla lobortis nibh id commodo sollicitudin. Fusce at purus diam. Curabitur ornare rhoncus tristique. Cras scelerisque in sem vitae cursus. Duis luctus elit eu nisi hendrerit, vel euismod quam facilisis.
 
   Mauris tristique mauris at placerat viverra. Donec at tempor erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce vel dolor lacus. Duis laoreet ante ex, vel dapibus turpis aliquam at. Donec ligula turpis, lacinia vitae lacus vel, maximus sodales purus. Sed volutpat bibendum fringilla. Nullam purus risus, vehicula at varius id, gravida nec justo. Cras lacus nulla, commodo id malesuada in, scelerisque sit amet lacus.`,

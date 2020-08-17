@@ -33,7 +33,7 @@ const Card = (props) => {
             <i className="arrow" class="fas fa-angle-right fa-3x"></i>
           </div>
         )}
-        <h4 className="count">{counter + 1}/5</h4>
+        {/* <h4 className="count">{counter + 1}/5</h4> */}
         <div
           className="img-container"
           style={{ transform: `translateX(${counter * -100}%)` }}
