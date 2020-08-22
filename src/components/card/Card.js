@@ -6,6 +6,12 @@ const Card = (props) => {
 
   const [counter, setCounter] = useState(0);
 
+  const [loading, setLoading] = useState(true);
+
+  const loaded = () => {
+    setLoading(false);
+  };
+
   const next = () => {
     if (counter === 4) {
     } else {
@@ -39,7 +45,12 @@ const Card = (props) => {
           style={{ transform: `translateX(${counter * -100}%)` }}
         >
           {img.map((image) => (
-            <img className="card-img" src={image} alt="" />
+            <img
+              onLoad={loaded}
+              className="card-img"
+              src={loading ? "img/spinner.gif" : image}
+              alt=""
+            />
           ))}
         </div>
       </div>
