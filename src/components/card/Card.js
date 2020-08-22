@@ -40,18 +40,20 @@ const Card = (props) => {
           </div>
         )}
         {/* <h4 className="count">{counter + 1}/5</h4> */}
-        <div
-          className="img-container"
-          style={{ transform: `translateX(${counter * -100}%)` }}
-        >
-          {img.map((image) => (
-            <img
-              onLoad={loaded}
-              className="card-img"
-              src={loading ? "img/spinner.gif" : image}
-              alt=""
-            />
-          ))}
+        <div className="setSize">
+          <div
+            className="img-container"
+            style={{ transform: `translateX(${counter * -100}%)` }}
+          >
+            {img.map((image) => (
+              <img
+                onLoad={loaded}
+                className="card-img"
+                src={loading ? "img/spinner.gif" : image}
+                alt=""
+              />
+            ))}
+          </div>
         </div>
       </div>
 
