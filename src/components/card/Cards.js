@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import info from "../info";
-import "./card.css";
+// import "./card.css";
 
 const Cards = ({ fetch }) => {
   return (

@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import info from "../info";
 import { useMediaQuery } from "react-responsive";
 
-import "./bnbinfo.css";
+// import "./bnbinfo.css";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
+  useParams
 } from "react-router-dom";
 const Bnbinfo = () => {
   let { entry } = useParams();
@@ -44,12 +40,12 @@ const Bnbinfo = () => {
   const isBigScreen = useMediaQuery({ query: "(min-device-width: 751px)" });
 
   return (
-    <div className="info">
-      <div className="name-rating">
-        <h1 classname="name">{name}</h1>
-        <h4 className="rating">
+    <div className="entry">
+      <div className="entry__title--container">
+        <h1 className="entry__name">{name}</h1>
+        <h4 className="entry__rating">
           <i class="fas fa-star"></i>
-          {" " + rating}
+          {" " + rating} 
         </h4>
       </div>
 
@@ -103,10 +99,10 @@ const Bnbinfo = () => {
           </div>
         </div>
         <div className="bulletpoints">
-          <h2>Things to do</h2>
+          <h2 className="bulletpoints__title">Things to do</h2>
           <ul>
             {bulletpoints.map((point) => (
-              <li>{point}</li>
+              <li className="bulletpoints__point">{point}</li>
             ))}
           </ul>
         </div>

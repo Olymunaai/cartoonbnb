@@ -1,0 +1,22 @@
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin box-shadow {
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+}
+
+@mixin max-media($pixels) {
+  @media (max-width: $pixels) {
+    @content;
+  }
+}
+
+@mixin min-media($pixels) {
+  @media (max-width: $pixels) {
+    @content;
+  }
+}

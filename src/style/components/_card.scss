@@ -1,0 +1,152 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  @include box-shadow;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  flex: 0 0 23%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-out;
+
+  @include max-media(1440px) {
+    flex: 0 0 47%;
+  }
+
+  @include max-media(800px) {
+    flex: 0 0 100%;
+    margin: 1rem auto;
+  }
+
+  &:hover {
+    transform: scale(1.06);
+    z-index: 3;
+    box-shadow: 0 2rem 3rem
+      rgba($color-black, 0.4);
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-rating {
+    font-size: 1.6rem;
+  }
+
+  &-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &-name:link,
+  &-name:visited {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+
+    &:hover .card-name {
+      text-decoration: underline $color-primary;
+    }
+  }
+
+  &-price {
+    text-align: right;
+    color: $color-primary;
+    font-size: 1.8rem;
+    padding-right: 1.8rem;
+  }
+
+  &-desc {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &-link {
+    text-decoration: none;
+  }
+}
+
+.m5 i {
+  height: 100%;
+  color: rgb(49, 149, 211);
+}
+
+.count {
+  position: absolute;
+  color: black;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.39);
+  width: 3rem;
+  height: 2rem;
+  right: 1.5rem;
+  bottom: 0;
+  text-align: center;
+}
+
+.img-container {
+  display: flex;
+
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.setSize {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.prev {
+  left: 0.3rem;
+  padding: 2rem;
+
+  i {
+    @include center-element;
+  }
+}
+
+.next {
+  right: 0.3rem;
+  padding: 2rem;
+
+  i {
+    @include center-element;
+  }
+}
+
+.card-click:active,
+.card-click:link,
+.card-click:visited {
+  text-decoration: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  z-index: 3;
+  background: transparent;
+  color: white;
+  border: 0;
+  height: 100%;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,14 +1,50 @@
-.img-display {
-  width: 100%;
-  height: 450px;
-  border-radius: 15px;
-  position: relative;
-  transform: translate(-50%);
-  overflow: hidden;
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-  transition: transform 0.4s ease-in-out;
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.entry {
+  margin: 2rem;
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+
+  &__name {
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+
+  &__rating i {
+    color: rgb(49, 149, 211);
+  }
+}
+
+.img {
+  height: 100%;
+
+  &-div {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-display {
+    width: 100%;
+    height: 45rem;
+    border-radius: 15px;
+    position: relative;
+    transform: translate(-50%);
+    overflow: hidden;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(20%, 1fr)
+    );
+    transition: transform 0.4s ease-in-out;
+
+    @include max-media(970px) {
+      height: 350px;
+    }
+  }
 }
 
 .main-img {
@@ -16,20 +52,8 @@
   grid-column: span 2 / auto;
 }
 
-.img {
-  height: 100%;
-}
-.info {
-  margin: 20px;
-  width: 90%;
-  max-width: 1120px;
-  margin: auto;
-}
-
-.img-div {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+.information {
+  font-size: 1.6rem;
 }
 
 .img-nav-wrapper {
@@ -61,6 +85,11 @@
   right: 15px;
 }
 
+.intro-desc {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
 .prev-btn:hover,
 .next-btn:hover {
   color: lightgrey;
@@ -72,10 +101,15 @@
   max-width: 350px;
   background: rgb(160, 158, 158);
   height: fit-content;
-}
+  @include box-shadow;
 
-.rating i {
-  color: rgb(49, 149, 211);
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__point {
+    font-size: 1.4rem;
+  }
 }
 
 .descriptions {
@@ -84,10 +118,6 @@
 
 .bulletpoints ul {
   padding: 25px;
-}
-
-strong {
-  font-size: 20px;
 }
 
 .price {
@@ -115,13 +145,7 @@ strong {
   border-radius: 20px;
   border: 1px solid lightgrey;
   background: rgb(49, 149, 211);
-  font-size: 20px;
-}
-
-@media (max-width: 970px) {
-  .img-display {
-    height: 350px;
-  }
+  font-size: 2rem;
 }
 
 @media (max-width: 750px) {
@@ -149,12 +173,12 @@ strong {
     overflow: visible;
   }
 
-  .name-rating {
+  .entry__title--container {
     width: 90%;
     margin: auto;
   }
 
-  .info {
+  .entry {
     width: 100%;
     overflow: hidden;
   }

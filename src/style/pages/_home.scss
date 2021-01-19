@@ -1,0 +1,9 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.cards-container {
+  margin: auto;
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+}

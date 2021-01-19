@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./nav.css";
+// import "./nav.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Nav = () => {
@@ -19,17 +19,21 @@ const Nav = () => {
 
   return (
     <nav className="navbar">
-      <h2 className="title">
-        <img className="logo" src={"/img/ctn.png"} /> cartoonbnb
-      </h2>
+      <Link className="nav-item-link" to="/">
+        {/* <img className="logo" src={"/img/ctn.jpg"} />  */}
+        <h2 className="title">
+        cartoonbnb      
+        </h2>
+
+        </Link>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link className="nav-item" to="/">
+          <Link className="nav-item-link" to="/">
             Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-item" to="/about">
+          <Link className="nav-item-link" to="/about">
             About
           </Link>
         </li>

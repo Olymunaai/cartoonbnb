@@ -1,0 +1,12 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.about {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+
+  &-container {
+    margin: 5rem auto;
+    width: 80%;
+  }
+}

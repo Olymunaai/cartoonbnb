@@ -29,6 +29,7 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="img-nav-wrapper">
+
         {counter !== 0 && (
           <div className="prev" onClick={previous}>
             <i className="arrow" class="fas fa-angle-left fa-3x"></i>
@@ -39,6 +40,7 @@ const Card = (props) => {
             <i className="arrow" class="fas fa-angle-right fa-3x"></i>
           </div>
         )}
+
         {/* <h4 className="count">{counter + 1}/5</h4> */}
         <div className="setSize">
           <div
@@ -57,18 +59,23 @@ const Card = (props) => {
         </div>
       </div>
 
+
       <h4 className="card-rating m5">
         <i class="fas fa-star"></i>
         {" " + rating}
       </h4>
       <Link className="card-name" to={`/bnbinfo/${id}`}>
-        <p className="card-name m5">{name}</p>
-      </Link>
+        <p  className="card-name m5">{name}</p>
+      <div className="card-info-container">
+        
+        <Link className="card-link" to={`/bnbinfo/${id}`}>
       <p className="card-desc m5">{description}</p>
-
       <div className="card-price m5">
-        <Link to={`/bnbinfo/${id}`}>{price} </Link>
+          {price} 
       </div>
+          </Link>
+      </div>      </Link>
+
     </div>
   );
 };

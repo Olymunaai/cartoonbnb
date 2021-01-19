@@ -4,9 +4,9 @@ const info = [
     img: [
       "/img/falls/falls1.jpg",
       "/img/falls/falls2.jpg",
-      "/img/falls/falls3.png",
+      "/img/falls/falls3.jpg",
       "/img/falls/falls4.jpg",
-      "/img/falls/falls5.png",
+      "/img/falls/falls5.jpg",
     ],
     rating: "4.4",
     name: "Gravity Falls, Oregon",
@@ -32,10 +32,10 @@ const info = [
   {
     id: 1,
     img: [
-      "/img/simp/simpsons1.png",
+      "/img/simp/simpsons1.jpg",
       "/img/simp/simpsons2.jpg",
       "/img/simp/simpsons3.jpg",
-      "/img/simp/simpsons4.png",
+      "/img/simp/simpsons4.jpg",
       "/img/simp/simpsons5.jpg",
     ],
     rating: "4.3",
@@ -65,7 +65,7 @@ const info = [
     img: [
       "/img/famguy/familyguy1.jpg",
       "/img/famguy/familyguy2.jpg",
-      "/img/famguy/familyguy3.png",
+      "/img/famguy/familyguy3.jpg",
       "/img/famguy/familyguy4.jpg",
       "/img/famguy/familyguy5.jpg",
     ],
@@ -92,11 +92,11 @@ const info = [
     id: 3,
 
     img: [
-      "/img/rick/rick1.png",
-      "/img/rick/rick2.png",
-      "/img/rick/rick3.png",
+      "/img/rick/rick1.jpg",
+      "/img/rick/rick2.jpg",
+      "/img/rick/rick3.jpg",
       "/img/rick/rick4.jpg",
-      "/img/rick/rick5.png",
+      "/img/rick/rick5.jpg",
     ],
     rating: "4.0",
     name: "Smith Residence, dimension C-132",
@@ -152,11 +152,11 @@ const info = [
     id: 6,
 
     img: [
-      "/img/time/time1.png",
+      "/img/time/time1.jpg",
       "/img/time/time2.jpg",
-      "/img/time/time3.png",
+      "/img/time/time3.jpg",
       "/img/time/time4.jpg",
-      "/img/time/time5.png",
+      "/img/time/time5.jpg",
     ],
     rating: "4.4",
     name: "Land of Ooo",
@@ -183,7 +183,7 @@ const info = [
   {
     id: 7,
     img: [
-      "/img/barbie/barbie1.png",
+      "/img/barbie/barbie1.jpg",
       "/img/barbie/barbie3.jpg",
       "/img/barbie/barbie5.jpg",
       "/img/barbie/barbie2.jpg",
