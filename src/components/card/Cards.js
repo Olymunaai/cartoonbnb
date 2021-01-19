@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import info from "../info";
 // import "./card.css";
@@ -14,6 +14,7 @@ const Cards = ({ fetch }) => {
           name={card.name}
           description={card.description}
           price={card.price}
+          key={card.id}
         />
       ))}
     </div>

@@ -12,8 +12,18 @@
     padding: 1rem 0;
   }
 
-  &__rating i {
-    color: rgb(49, 149, 211);
+  &__rating {
+    font-size: 2rem;
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    & i {
+      color: $color-primary;
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -67,10 +77,17 @@
   background: transparent;
   color: white;
   border: 0;
-  height: 100px;
+  height: 100%;
   display: none;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+  padding: 2.5rem;
+
+  &:hover {
+    color: $color-primary;
+    transition: color 0.3s ease-in-out;
+  }
 }
 
 .counter {
@@ -78,22 +95,16 @@
 }
 
 .prev-btn {
-  left: 15px;
+  left: 0;
 }
 
 .next-btn {
-  right: 15px;
+  right: 0;
 }
 
 .intro-desc {
   font-size: 2rem;
   margin: 1rem 0;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  color: lightgrey;
-  transition: color 0.3s ease-in-out;
 }
 
 .bulletpoints {
@@ -122,6 +133,10 @@
 
 .price {
   float: right;
+  color: $color-primary;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1.5rem;
 }
 
 .bulletpoints h2 {
@@ -132,6 +147,7 @@
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .book {
@@ -140,12 +156,26 @@
 }
 
 .book-now {
-  width: 150px;
-  height: 50px;
   border-radius: 20px;
   border: 1px solid lightgrey;
-  background: rgb(49, 149, 211);
+  color: $color-white;
+  background: $color-primary;
   font-size: 2rem;
+  font-weight: 600;
+  padding: 1.5rem 2.5rem;
+  @include box-shadow;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 0.4rem solid transparent;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2rem 3rem
+      rgba($color-black, 0.3);
+    border: 0.4rem solid
+      darken($color-primary, 20%);
+  }
 }
 
 @media (max-width: 750px) {

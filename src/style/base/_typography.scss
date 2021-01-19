@@ -1,7 +1,20 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
 body {
 }
 
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
+  @include max-media(800px) {
+    font-size: 55%;
+  }
+
+  @include max-media(500px) {
+    font-size: 50%;
+  }
+  @include max-media(330px) {
+    font-size: 47.5%;
+  }
 }

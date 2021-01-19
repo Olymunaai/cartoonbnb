@@ -1,6 +1,6 @@
 const info = [
   {
-    id: 4,
+    id: "4",
     img: [
       "/img/falls/falls1.jpg",
       "/img/falls/falls2.jpg",
@@ -30,7 +30,7 @@ const info = [
     ],
   },
   {
-    id: 1,
+    id: "1",
     img: [
       "/img/simp/simpsons1.jpg",
       "/img/simp/simpsons2.jpg",
@@ -60,7 +60,7 @@ const info = [
     ],
   },
   {
-    id: 2,
+    id: "2",
 
     img: [
       "/img/famguy/familyguy1.jpg",
@@ -89,7 +89,7 @@ const info = [
     ],
   },
   {
-    id: 3,
+    id: "3",
 
     img: [
       "/img/rick/rick1.jpg",
@@ -119,7 +119,7 @@ const info = [
     ],
   },
   {
-    id: 5,
+    id: "5",
 
     img: [
       "/img/fosters/fosters1.jpg",
@@ -149,7 +149,7 @@ const info = [
     ],
   },
   {
-    id: 6,
+    id: "6",
 
     img: [
       "/img/time/time1.jpg",
@@ -181,7 +181,7 @@ const info = [
     ],
   },
   {
-    id: 7,
+    id: "7",
     img: [
       "/img/barbie/barbie1.jpg",
       "/img/barbie/barbie3.jpg",
@@ -211,7 +211,7 @@ const info = [
     ],
   },
   {
-    id: 8,
+    id: "8",
     img: [
       "/img/nbc/jack1.jpg",
       "/img/nbc/jack2.jpg",
@@ -241,7 +241,7 @@ const info = [
     ],
   },
   {
-    id: 9,
+    id: "9",
 
     img: [
       "/img/tangled/tangled1.jpg",

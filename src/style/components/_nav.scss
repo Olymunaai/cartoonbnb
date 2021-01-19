@@ -7,8 +7,8 @@
 }
 
 .title {
-  margin-left: 2rem;
-  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  font-size: 3rem;
 }
 
 .navbar {
@@ -46,6 +46,7 @@
   display: inline-block;
   transition: all 0.3s ease;
   color: $color-white;
+  font-weight: 600;
 
   &:hover {
     transform: scale(1.1);

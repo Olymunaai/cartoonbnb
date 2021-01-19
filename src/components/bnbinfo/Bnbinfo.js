@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import info from "../info";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 
 // import "./bnbinfo.css";
 import {
@@ -9,7 +9,7 @@ import {
 const Bnbinfo = () => {
   let { entry } = useParams();
 
-  const hotel = info.find((e) => e.id == entry);
+  const hotel = info.find((e) => e.id === entry);
   const {
     id,
     img,
@@ -37,27 +37,27 @@ const Bnbinfo = () => {
     }
   };
 
-  const isBigScreen = useMediaQuery({ query: "(min-device-width: 751px)" });
+  // const isBigScreen = useMediaQuery({ query: "(min-device-width: 751px)" });
 
   return (
     <div className="entry">
       <div className="entry__title--container">
         <h1 className="entry__name">{name}</h1>
         <h4 className="entry__rating">
-          <i class="fas fa-star"></i>
-          {" " + rating} 
+          <i className="fas fa-star"></i>
+          <p className="entry__rating-number">{" " + rating} </p>
         </h4>
       </div>
 
       <div className="img-nav-wrapper">
         {counter !== 0 && (
           <div className="prev-btn" onClick={previous}>
-            <i className="arrow" class="fas fa-angle-left fa-3x"></i>
+            <i className="arrow" className="fas fa-angle-left fa-3x"></i>
           </div>
         )}
         {counter !== 4 && (
           <div className="next-btn" onClick={next}>
-            <i className="arrow" class="fas fa-angle-right fa-3x"></i>
+            <i className="arrow" className="fas fa-angle-right fa-3x"></i>
           </div>
         )}
 
@@ -70,19 +70,19 @@ const Bnbinfo = () => {
           }}
         >
           <div className="main-img img-div">
-            <img className="sec-img img" src={img[0]} />
+            <img className="sec-img img" alt="bnb" src={img[0]} />
           </div>
           <div className="img-div">
-            <img className="sec-img img" src={img[1]} />
+            <img className="sec-img img" alt="bnb" src={img[1]} />
           </div>
           <div className="img-div">
-            <img className="sec-img img" src={img[2]} />
+            <img className="sec-img img" alt="bnb" src={img[2]} />
           </div>
           <div className="img-div">
-            <img className="sec-img img" src={img[3]} />
+            <img className="sec-img img" alt="bnb" src={img[3]} />
           </div>
           <div className="img-div">
-            <img className="sec-img img" src={img[4]} />
+            <img className="sec-img img" alt="bnb" src={img[4]} />
           </div>
         </div>
       </div>
@@ -93,8 +93,8 @@ const Bnbinfo = () => {
           </p>
           <div className="information">
             <p>{extended}</p>
-            <p>
-              <strong className="price">{price}</strong>
+            <p className="price">Only {price}
+
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ const Bnbinfo = () => {
           <h2 className="bulletpoints__title">Things to do</h2>
           <ul>
             {bulletpoints.map((point) => (
-              <li className="bulletpoints__point">{point}</li>
+              <li className="bulletpoints__point" >{point}</li>
             ))}
           </ul>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   const { id, img, rating, name, description, price } = props;
@@ -29,15 +29,15 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="img-nav-wrapper">
-
+        
         {counter !== 0 && (
           <div className="prev" onClick={previous}>
-            <i className="arrow" class="fas fa-angle-left fa-3x"></i>
+            <i className="arrow" className="fas fa-angle-left fa-3x"></i>
           </div>
         )}
         {counter !== 4 && (
           <div className="next" onClick={next}>
-            <i className="arrow" class="fas fa-angle-right fa-3x"></i>
+            <i className="arrow" className="fas fa-angle-right fa-3x"></i>
           </div>
         )}
 
@@ -50,9 +50,10 @@ const Card = (props) => {
             {img.map((image) => (
               <img
                 onLoad={loaded}
-                className="card-img"
+                className="card-img" 
                 src={loading ? "img/spinner.gif" : image}
-                alt=""
+                alt="bnb"
+                key={image}
               />
             ))}
           </div>
@@ -61,19 +62,19 @@ const Card = (props) => {
 
 
       <h4 className="card-rating m5">
-        <i class="fas fa-star"></i>
+        <i className="fas fa-star"></i>
         {" " + rating}
       </h4>
       <Link className="card-name" to={`/bnbinfo/${id}`}>
         <p  className="card-name m5">{name}</p>
       <div className="card-info-container">
         
-        <Link className="card-link" to={`/bnbinfo/${id}`}>
+        <span className="card-link" to={`/bnbinfo/${id}`}>
       <p className="card-desc m5">{description}</p>
       <div className="card-price m5">
           {price} 
       </div>
-          </Link>
+          </span>
       </div>      </Link>
 
     </div>
